@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Profissional - Paulo César Nascimento da Silva</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafb; /* Lighter gray for a softer look */
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem; /* 12px */
+            padding: 1.5rem; /* 24px */
+            margin-bottom: 1.5rem; /* 24px */
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        .card-title {
+            font-size: 1.25rem; /* 20px */
+            font-weight: 600;
+            color: #111827; /* gray-900 */
+            margin-bottom: 1rem; /* 16px */
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #e5e7eb; /* gray-200 */
+            padding-bottom: 0.75rem;
+        }
+        .card-title svg {
+            margin-right: 0.75rem; /* 12px */
+            color: #4f46e5; /* indigo-600 */
+        }
+        .list-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+        .list-item svg {
+            flex-shrink: 0;
+            margin-top: 5px;
+            margin-right: 0.75rem;
+            color: #4f46e5;
+        }
+        .kpi-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            background-color: #f3f4f6;
+            margin-bottom: 0.5rem;
+        }
+        .kpi-value {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: #4f46e5;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+<div class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
+
+    <!-- Header Section -->
+    <header class="text-center mb-10">
+        <h1 class="text-4xl font-bold text-gray-900">Paulo César Nascimento da Silva</h1>
+        <p class="text-xl text-indigo-600 font-medium mt-2">Desenvolvedor Back-end / Dashboard</p>
+    </header>
+
+    <!-- Main Content Grid -->
+    <div class="flex flex-col lg:flex-row gap-8">
+
+        <!-- Coluna da Esquerda -->
+        <div class="w-full lg:w-1/2">
+            <!-- Top 3 Deliveries -->
+            <div class="card">
+                <h2 class="card-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 5v14h14V5H5zm0 0l7 7 7-7" /></svg>
+                    Top 3 Entregas Atuais
+                </h2>
+                <ol class="list-decimal list-inside space-y-4 text-gray-700">
+                    <li><strong>Análise de Dados e Tomada de Decisão:</strong>Desenvolvo dashboards interativos que transformam dados brutos em informações claras, capacitando os gestores para uma análise de negócio precisa e a otimização de resultados.</li>
+                    <li><strong>Desenvolvimento de Backend e Integração de Sistemas:</strong> Desenvolvo soluções de integração completas, utilizando Spring Boot para construir APIs e lógicas de negócio customizadas, e n8n para orquestrar a coleta e o envio de dados de rastreamento para o CRM do cliente.</li>
+                    <li><strong>Automação de Jornadas Customizadas:</strong> Construo funis de follow-up flexíveis, programando automações que respeitam os intervalos de tempo exatos definidos pelo cliente entre cada mensagem, garantindo uma cadência de comunicação estratégica e controlada.</li>
+                </ol>
+            </div>
+
+            <!-- August Goal -->
+            <div class="card">
+                <h2 class="card-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                    Meta Agosto/25: Implementação do Dashboard V1.1
+                </h2>
+                <div class="space-y-3 text-gray-700">
+                    <p><strong class="text-gray-900">Filtros Avançados:</strong> Adicionar filtros por Campanha, AdSet e Ad.</p>
+                    <p><strong class="text-gray-900">KPIs com Drill-down:</strong> Permitir o detalhamento interativo dos indicadores.</p>
+                    <p><strong class="text-gray-900">Nova Página "Tin Tim":</strong> Criar uma réplica da página de referência, integrando os KPIs de performance diretamente em sua estrutura visual.</p>
+                </div>
+                <div class="mt-4 pt-4 border-t border-gray-200">
+                    <h3 class="font-semibold text-gray-900 mb-2">Ações Principais:</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>Finalizar e validar a implementação dos Filtros Avançados.</li>
+                        <li>Finalizar e validar os KPIs com Drill-down.</li>
+                        <li>Concluir a "Nova Página Tim Tim" e realizar a entrega das alterações feitas no projeto.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Future Goals -->
+            <div class="card">
+                <h2 class="card-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+                    Roadmap (Set-Dez/25)
+                </h2>
+                <div class="space-y-4">
+                    <div class="list-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        <div><strong class="text-gray-900">Set/25:</strong> Desenvolver a nova versão do dashboard, incluindo a criação de tabelas no banco de dados para salvar as informações de Meta e Google e a integração com a API da Google para alimentar o Dashboard</div>
+                    </div>
+                    <div class="list-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        <div><strong class="text-gray-900">Out/25:</strong>Implementação de um API Gateway com um sistema de autenticação JWT e refresh token para reforçar a segurança da plataforma. Em segundo lugar, faremos a adição de parâmetros de metas aos KPIs interativos, o que permitirá uma análise visual rápida de 'realizado vs. planejado</div>
+                    </div>
+                    <div class="list-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        <div><strong class="text-gray-900">Nov/25:</strong>Executar uma refatoração full-stack, amparada pela criacao de testes unitários e finalizada com uma documentação técnica completa para elevar a qualidade e a manutenibilidade do projeto.</div>
+                    </div>
+                    <div class="list-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        <div><strong class="text-gray-900">Dez/25:</strong> Analisar a viabilidade de integração com novas plataformas de anúncio (TikTok, LinkedIn, etc.) para expandir o mercado e atrair um leque maior de clientes.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Coluna da Direita -->
+        <div class="w-full lg:w-1/2">
+            <!-- KPIs -->
+            <div class="card">
+                <h2 class="card-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+                    KPIs (Base Ago/25)
+                </h2>
+                <div class="space-y-3">
+                    <div class="kpi-item">
+                        <span class="font-medium text-gray-700">Erros críticos de visualização</span>
+                        <span class="kpi-value">5</span>
+                    </div>
+                    <div class="kpi-item">
+                        <span class="font-medium text-gray-700">Bugs em Produção</span>
+                        <span class="kpi-value">4</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Risks & Support -->
+            <div class="card">
+                <h2 class="card-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    Riscos & Apoios
+                </h2>
+                <div class="space-y-3">
+                    <div>
+                        <h3 class="font-semibold text-red-600">Risco:</h3>
+                        <p class="text-gray-700">Conhecimento baixo a médio nos fundamentos e no desenvolvimento de front-end.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-green-600">Apoio:</h3>
+                        <p class="text-gray-700">Conhecimento médio a alto em desenvolvimento backend e uma equipe altamente qualificada em front-end.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Weekly Ritual -->
+            <div class="card text-center bg-indigo-600 text-white">
+                <h2 class="card-title justify-center text-white border-indigo-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.085a2 2 0 00-1.736.97l-1.9 3.8a2 2 0 00.38 2.54l.5 1.5M7 20m7-10h2.553a2 2 0 011.946 2.414l-2.553 7M7 20l-1.54-1.54a2 2 0 010-2.828l4-4a2 2 0 012.828 0l3 3a2 2 0 010 2.828l-1.54 1.54M7 20l-4-4" /></svg>
+                    Ritual Semanal
+                </h2>
+                <p>Acompanhamento todas as <strong>segundas-feiras, às 13h</strong>.</p>
+                <a href="https://docs.google.com/spreadsheets/d/1baLjffa0BIaYIsTean7T8OP3AT-fBgmIsYmgWN5MZJQ/edit?usp=sharing" target="_blank" class="mt-4 inline-block bg-white text-indigo-600 font-semibold py-2 px-6 rounded-lg hover:bg-gray-100 transition-colors">
+                    Acessar Planilha
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
