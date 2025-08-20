@@ -1,0 +1,426 @@
+    <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluxograma - Documento Estratégico Kommo CRM</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-top: 20px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+        }
+        h2 {
+            font-size: 2em;
+            margin-top: 40px;
+        }
+        h3 {
+            font-size: 1.5em;
+            border-bottom: none;
+        }
+        .flowchart {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .funnel {
+            border: 1px solid #bdc3c7;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #ecf0f1;
+        }
+        .stage {
+            background-color: #ffffff;
+            border: 1px solid #3498db;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: relative;
+        }
+        .stage-title {
+            font-weight: bold;
+            color: #2980b9;
+            font-size: 1.2em;
+        }
+        .stage-desc {
+            font-size: 0.95em;
+            margin-top: 8px;
+        }
+        .arrow {
+            text-align: center;
+            font-size: 2em;
+            color: #2c3e50;
+            margin: -5px 0;
+        }
+        .conditional {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 15px;
+            gap: 15px;
+        }
+        .branch {
+            flex: 1;
+            padding: 15px;
+            border: 1px dashed #95a5a6;
+            border-radius: 5px;
+            background-color: #fdfdfd;
+        }
+        .branch-title {
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 10px;
+            color: #7f8c8d;
+        }
+        .manual-action {
+            border-left: 5px solid #f1c40f; /* Amarelo para ação manual */
+        }
+        .automation {
+            border-left: 5px solid #2ecc71; /* Verde para automação */
+        }
+        .endpoint {
+            border-left: 5px solid #e74c3c; /* Vermelho para perdido/fim */
+        }
+        .connector {
+            background-color: #e8f4fd;
+            border: 1px dashed #3498db;
+            font-style: italic;
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .strategy {
+            background-color: #f9f3e6;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #f39c12;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Fluxograma do Documento Estratégico Kommo CRM</h1>
+        <p>Em um cenário de vendas cada vez mais competitivo, a chave para o sucesso reside na eficiência e na criação de conexões genuínas. Uma jornada de leads bem estruturada, que mescla de forma inteligente a automação com o toque humano, é a resposta para impulsionar a produtividade da equipe e otimizar o uso do CRM.</p>
+
+        <div class="flowchart">
+
+            <div class="funnel" id="funil-00">
+                <h2>00 - Recepção Virtual</h2>
+                <div class="stage automation">
+                    <div class="stage-title">Lead partner recebido</div>
+                    <div class="stage-desc">Ao obter um novo lead do Kommo CRM, esta etapa dispara automaticamente uma mensagem inicial personalizada. A mensagem é adaptada com base no interesse específico do lead, informação que é recebida juntamente com os dados do contato, garantindo uma abordagem relevante desde o primeiro contato.</div>
+                </div>
+                <div class="arrow"> + </div>
+                <div class="stage automation">
+                    <div class="stage-title">Marketing Leads</div>
+                    <div class="stage-desc"> Quando um novo lead, originado de campanhas de tráfego pago (Google Ads, Meta Ads, etc.), entra em contato. Imediatamente, uma mensagem inicial automatizada e estratégica é enviada. O principal objetivo desta comunicação é fazer uma pergunta aberta e investigativa para identificar o principal problema, desafio ou "dor" do lead. A resposta obtida é registrada no CRM, fornecendo à equipe de Vendas o insumo essencial para preparar uma abordagem consultiva e personalizada, focada em agendar uma reunião de diagnóstico.</div>
+                </div>
+                <div class="arrow">&darr;</div>
+                <div class="stage automation">
+                    <div class="stage-title">Aguardando Resposta</div>
+                    <div class="stage-desc">Esta etapa funciona como um portão condicional que aguarda a resposta do lead. Durante um período de 180 minutos, o sistema monitora qualquer interação. Dentro deste intervalo, "cutucadas" (lembretes automáticos) são enviadas após 60 e 180 minutos para incentivar o reativamento da conversa.</div>
+                </div>
+                <div class="conditional">
+                    <div class="branch">
+                        <div class="branch-title">Se houver resposta</div>
+                        <div class="arrow">&darr;</div>
+                        <div class="stage">
+                            <div class="stage-title">Lead Qualificado</div>
+                            <div class="stage-desc">O lead é imediatamente direcionado para a etapa de “Lead Qualificado”, e será gerado uma tarefa para o usuário responsável para avisar da resposta do lead .</div>
+                        </div>
+                        <div class="arrow">&darr;</div>
+                         <div class="connector">Move para o Funil 01 - Qualificado</div>
+                    </div>
+                    <div class="branch">
+                        <div class="branch-title">Se não houver resposta</div>
+                        <div class="arrow">&darr;</div>
+                         <div class="connector">Move para o Funil 06 - Follow-up</div>
+                    </div>
+                </div>
+                <hr style="margin: 20px 0;">
+                <div class="stage manual-action">
+                    <div class="stage-title">Retorno Follow-up</div>
+                    <div class="stage-desc">Armazena leads que responderam a um follow-up. A automação é pausada e o vendedor é notificado para assumir manualmente.</div>
+                </div>
+                 <div class="stage">
+                    <div class="stage-title">Administrativo</div>
+                    <div class="stage-desc">Centraliza contatos que não são oportunidades de negócio (fornecedores, candidaturas, etc.) para manter o funil limpo.</div>
+                </div>
+                <div class="stage endpoint">
+                    <div class="stage-title">Lead Perdido (Venda Perdida)</div>
+                    <div class="stage-desc">Esta fase organiza os leads que, no momento, não têm interesse em nossa solução. Mais do que um simples "arquivo morto", este é um repositório estratégico. Os leads aqui são pausados de qualquer comunicação comercial imediata, mas servem como uma valiosa fonte de dados para análise. Estudando este segmento, podemos entender melhor os motivos da recusa (preço, funcionalidade, timing) e refinar nossas futuras estratégias de marketing e produto.</div>
+                </div>
+            </div>
+
+            <div class="funnel" id="funil-01">
+                <h2>01 - Qualificado</h2>
+                <div class="stage">
+                    <div class="stage-title">Lead Qualificado (Ponto de Partida)</div>
+                    <div class="stage-desc">Leads validados que responderam. Uma tarefa é criada e atribuída ao vendedor para iniciar a abordagem de agendamento.</div>
+                </div>
+                <div class="arrow">&darr;</div>
+                <div class="stage manual-action">
+                    <div class="stage-title">Tentativa de Contato (Manual)</div>
+                    <div class="stage-desc">Vendedor move o card para cá ao iniciar o contato (ligação, mensagem). Gerencia quem está sendo abordado ativamente. <em>*Se não houver resposta em 1 dia, move para o Funil de Follow-up.</em></div>
+                </div>
+                <div class="arrow">&darr;</div>
+                <div class="conditional">
+                    <div class="branch">
+                        <div class="branch-title">Se houver resposta</div>
+                        <div class="arrow">&darr;</div>
+                        <div class="stage">
+                            <div class="stage-title">Reunião Agendada (Sucesso!)</div>
+                            <div class="stage-desc">O objetivo final deste funil. Quando o lead clica no link e agenda a reunião, ele entra automaticamente nesta etapa. A partir daqui, ele é movido para o próximo funil: "Funil de Confirmação de Reunião"</div>
+                        </div>
+                        <div class="arrow">&darr;</div>
+                        <div class="connector">Move para o Funil 02 - Confirmação de Reunião</div>
+                    </div>
+                    <div class="branch">
+                        <div class="branch-title">Se não houver resposta</div>
+                        <div class="arrow">&darr;</div>
+                        <div class="connector">Move para o Funil 06 - Follow-up</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="funnel" id="funil-02">
+                <h2>02 - Confirmação de Reunião</h2>
+                <div class="stage automation">
+                    <div class="stage-title">Agendado Hoje</div>
+                    <div class="stage-desc">Esta etapa centraliza todos os leads cuja reunião está agendada. Ao entrar aqui, uma automação é acionada para enviar imediatamente um vídeo, agradecendo pelo agendamento e compartilhando informações úteis para a conversa que está por vir e direcionando para a etapa seguinte.</div>
+                </div>
+                <div class="arrow">&darr;</div>
+                <div class="stage automation">
+                    <div class="stage-title">Para Confirmar</div>
+                    <div class="stage-desc">Esta etapa funciona como um distribuidor inteligente. Ela verifica quanto tempo falta para a reunião agendada e encaminha o lead para a etapa de confirmação mais apropriada. Por exemplo, se um lead chega aqui faltando menos de 3 horas para a reunião, ele será movido para a etapa de "Lembrete de 1 Hora" assim que der o intervalo correto, pulando a de 3 horas para garantir que a comunicação seja sempre relevante e pontual.</div>
+                </div>
+                <div class="arrow">&darr;</div>
+                <div class="stage automation">
+                    <div class="stage-title">Confirmação 24hrs</div>
+                    <div class="stage-desc">Esta etapa é acionada exatamente 24 horas antes do horário agendado da reunião. Sua função é enviar a primeira mensagem de confirmação oficial, reforçando a data e a hora do encontro e fornecendo informações essenciais. O objetivo é garantir o compromisso do lead com antecedência.</div>
+                </div>
+                <div class="arrow">&darr;</div>
+                <div class="stage automation">
+                    <div class="stage-title">Confirmação 3hrs</div>
+                    <div class="stage-desc">Acionada automaticamente 3 horas antes da reunião, esta etapa envia um lembrete de proximidade. O objetivo é confirmar o compromisso para o mesmo dia.</div>
+                </div>
+                <div class="arrow">&darr;</div>
+                <div class="stage automation">
+                    <div class="stage-title">Confirmação 1hrs</div>
+                    <div class="stage-desc">EEsta etapa envia o último lembrete, exatamente 1 hora antes da reunião. A mensagem é curta, direta e informa que o encontro está prestes a começar, incluindo o link de acesso de forma bem visível para facilitar a entrada na sala.</div>
+                </div>
+                <div class="arrow">&darr;</div>
+                <div class="stage automation">
+                    <div class="stage-title">Enviando Link da Reunião</div>
+                    <div class="stage-desc">Envia o link de acesso 5 minutos antes da reunião.</div>
+                </div>
+                <div class="conditional">
+                    <div class="branch">
+                        <div class="branch-title">Após a Reunião</div>
+                        <div class="arrow">&darr;</div>
+                        <div class="stage automation">
+                            <div class="stage-title">Reunião Realizada</div>
+                             <div class="stage-desc">Etapa de validação manual que confirma o comparecimento e o engajamento do lead na reunião. Ao ser movido para cá pelo vendedor, o lead avança no processo comercial, acionando a criação de uma oportunidade no próximo funil.</div>
+                        </div>
+                        <div class="arrow">&darr;</div>
+                        <div class="connector">Move para o Funil 03 - Propostas</div>
+                    </div>
+                    <div class="branch">
+                        <div class="branch-title">Se não compareceu</div>
+                        <div class="arrow">&darr;</div>
+                        <div class="stage endpoint">
+                            <div class="stage-title">Reunião Não Realizada</div>
+                            <div class="stage-desc">Centraliza todos os leads que não compareceram ao encontro agendado. Funciona como um ponto de partida para o processo de recuperação, acionando um fluxo de automação de Follow up  que buscará um novo agendamento.</div>
+                        </div>
+                        <div class="arrow">&darr;</div>
+                        <div class="connector">Move para o Funil 06 - Follow-up</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="funnel" id="funil-03">
+                <h2>03 - Propostas</h2>
+                 <div class="stage manual-action">
+                    <div class="stage-title">Realização de Proposta</div>
+                    <div class="stage-desc">"Esta é a primeira etapa do funil e funciona como a "mesa de trabalho" da equipe de vendas. Aqui ficam todos os leads para os quais uma proposta comercial está sendo ativamente elaborada. É a fase de estudo, personalização e montagem da oferta ideal para a necessidade do cliente.</div>
+                </div>
+                <div class="arrow">&darr;</div>
+                 <div class="stage manual-action">
+                    <div class="stage-title">Proposta Entregue</div>
+                    <div class="stage-desc">Assim que a proposta é finalizada e enviada ao lead, o card é movido para esta coluna. Ela serve como um ponto de controle para saber quais propostas já estão nas mãos dos potenciais clientes. O objetivo aqui é acompanhar o tempo de resposta e iniciar o follow-up para garantir que a proposta foi recebida e compreendida.</div>
+                </div>
+                <div class="arrow">&darr;</div>
+                 <div class="stage manual-action">
+                    <div class="stage-title">Negociação</div>
+                    <div class="stage-desc">Esta etapa pode ser utilizada para indicar que os termos gerais da proposta foram aceitos pelo lead e que ele está pronto para avançar para os detalhes contratuais, ou para propostas que foram aceitas sem necessidade de uma longa negociação.</div>
+                </div>
+                <div class="arrow">&darr;</div>
+                <div class="conditional">
+                    <div class="branch">
+                        <div class="branch-title">Respondeu a Proposta</div>
+                        <div class="arrow">&darr;</div>
+                        <div class="stage automation">
+                            <div class="stage-title">Proposta Fechada</div>
+                            <div class="stage-desc">Aqui ficam os leads que retornaram com dúvidas, objeções ou contrapropostas. É a fase de discussão ativa, onde o vendedor trabalha para ajustar termos, defender o valor da solução e contornar os pontos levantados pelo cliente. O objetivo final desta etapa é chegar a um acordo mútuo para, então, mover o lead para "Venda Ganha".</div>
+                        </div>
+                        <div class="arrow">&darr;</div>
+                        <div class="connector">Move para o Funil 04 - Onboarding e Pós-Venda</div>
+                    </div>
+                    <div class="branch">
+                        <div class="branch-title">Não Respondeu a Proposta</div>
+                        <div class="arrow">&darr;</div>
+                        <div class="stage endpoint">
+                            <div class="stage-title">Sem Resposta</div>
+                            <div class="stage-desc">sera feito o contato com o lead e caso não obtenha a resposta do mesmo o lead e encaminhado para o fluxo de follow up</div>
+                        </div>
+                        <div class="arrow">&darr;</div>
+                        <div class="connector">Move para o Funil 06 - Follow-up</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="funnel" id="funil-04">
+                <h2>04 - Onboarding e Pós-Venda</h2>
+                <div class="stage automation">
+                    <div class="stage-title">AGUARDANDO DOCUMENTAÇÃO</div>
+                    <div class="stage-desc">Ao ser movido para esta etapa o cliente receberá uma mensagem automática solicitando os documentos necessários para prosseguir com o servicos, após receber os documentos o cliente e movido para a etapa de “Documentação Recebida</div>
+                </div>
+                <div class="arrow">&darr;</div>
+                <div class="stage">
+                    <div class="stage-title">DOCUMENTAÇÃO RECEBIDA</div>
+                    <div class="stage-desc">O time de Onboarding recebe todos os documentos necessários para a implementação. Essa etapa serve como um ponto de controle para garantir que seja implementado o serviço da forma que cliente solicita.</div>
+                </div>
+                <div class="arrow">&darr;</div>
+                <div class="stage">
+                    <div class="stage-title">ACESSO E CONFIGURAÇÃO INICIAL</div>
+                    <div class="stage-desc">Acesso ao cliente é configurado e as primeiras personalizações são feitas no sistema.</div>
+                </div>
+                <div class="arrow">&darr;</div>
+                <div class="stage">
+                    <div class="stage-title">TREINAMENTO INICIAL</div>
+                    <div class="stage-desc">O cliente recebe treinamento necessário para começar a usar a plataforma de forma autônoma.</div>
+                </div>
+                <div class="arrow">&darr;</div>
+                <div class="stage">
+                    <div class="stage-title">IMPLEMENTAÇÃO INICIAL</div>
+                    <div class="stage-desc">A implementação é finalizada e o cliente está pronto para iniciar as operações.</div>
+                </div>
+                <div class="arrow">&darr;</div>
+                <div class="stage">
+                    <div class="stage-title">IMPLEMENTAÇÃO SEQUENCIAL</div>
+                    <div class="stage-desc">Esta etapa é dedicada a clientes que já concluíram  a implementação inicial, mas desejam uma segunda fase de implementação, novas funcionalidades, ou otimizações no sistema já entregue.</div>
+                </div>
+            </div>
+
+            <div class="funnel" id="funil-05">
+                <h2>05 - Financeiro - Gestão de Mensalidades</h2>
+                <div class="stage">
+                    <div class="stage-title">A Faturar / Contato Inicial</div>
+                    <div class="stage-desc">"Esta etapa armazena todos os clientes com mensalidades que serão geradas no ciclo atual. Serve como uma "sala de preparação" antes do envio da cobrança. Aqui, o sistema pode verificar dados e preparar a fatura. (Na sua imagem, esta é a etapa "CONTATO INICIAL").</div>
+                </div>
+                <div class="arrow">&darr;</div>
+                <div class="stage automation">
+                    <div class="stage-title">Boleto Enviado / Aguardando Pagamento</div>
+                    <div class="stage-desc">Assim que a fatura ou o boleto é gerado e enviado ao cliente, o card é movido para cá. Esta etapa centraliza todos os clientes que estão dentro do prazo de vencimento. Automações podem ser configuradas para enviar lembretes de proximidade do vencimento.</div>
+                </div>
+                <div class="arrow">&darr;</div>
+                <div class="stage automation">
+                    <div class="stage-title">Vencimento da Mensalidade / Vence Hoje</div>
+                    <div class="stage-desc">Uma etapa específica para os clientes cuja mensalidade vence no dia corrente. Isso permite uma ação mais direta, como o envio de um lembrete final no dia do vencimento para garantir o pagamento em dia. (Na sua imagem, esta é a etapa "VENCIMENTO DE MENSALIDADE").</div>
+                </div>
+                <div class="arrow">&darr;</div>
+                <div class="stage automation">
+                    <div class="stage-title">Atraso de Mensalidade / Inadimplente</div>
+                    <div class="stage-desc">Se o pagamento não for identificado até o final do dia do vencimento, o cliente é movido automaticamente para cá. Esta etapa aciona um novo fluxo de automação: a régua de cobrança, com mensagens mais incisivas e em cadências diferentes para recuperar o valor devido. (Na sua imagem, esta é a etapa "ATRASO DE MENSALIDADE").
+                    </div>
+                </div>
+                 <div class="arrow">&darr;</div>
+                 <div class="stage manual-action">
+                    <div class="stage-title">Em Negociação</div>
+                    <div class="stage-desc">Para clientes inadimplentes que responderam à cobrança e estão tentando negociar uma nova data de pagamento ou um parcelamento. Esta etapa requer ação manual do time financeiro para tratar cada caso individualmente.</div>
+                </div>
+                <div class="arrow">&darr;</div>
+                <div class="stage">
+                    <div class="stage-title">Pagamento Realizado</div>
+                    <div class="stage-desc">O objetivo final. Após a confirmação do pagamento (seja em dia ou em atraso), o cliente é movido para esta etapa. Isso "reseta" o ciclo dele para o próximo mês e limpa o funil, garantindo que apenas as cobranças ativas permaneçam visíveis.
+                    </div>
+                </div>
+            </div>
+
+            <div class="funnel" id="funil-06">
+                <h2>06 - Follow-up</h2>
+                <div class="stage automation">
+                    <div class="stage-title">Entrada Follow-up</div>
+                    <div class="stage-desc">"Esta etapa funciona como um "portão" que verifica o dia e a hora atuais. Ela segura o lead e só permite que ele avance para a próxima mensagem de follow-up se o envio for ocorrer dentro do horário de expediente definido (ex: segunda a sexta, das 9h às 18h). Se estiver fora do horário, o lead aguarda aqui até o próximo período comercial disponível.</div>
+                </div>
+                <div class="arrow">&darr;</div>
+                <div class="stage automation">
+                    <div class="stage-title">Follow-up (1D)</div>
+                    <div class="stage-desc">Esta etapa é acionada para qualquer lead que permaneça inativo por 24 horas. Sua função é enviar uma mensagem de reengajamento cujo conteúdo é personalizado dinamicamente com base no último funil em que o lead esteve. Isso garante que o follow-up seja sempre relevante ao contexto da última interação.</div>
+                </div>
+                <div class="arrow">&darr;</div>
+                <div class="stage automation">
+                    <div class="stage-title">Follow-up (3D)</div>
+                    <div class="stage-desc">O objetivo desta etapa é recuperar a atenção de leads que começaram a esfriar. Após 3 dias de inatividade, o sistema envia uma mensagem que pode agregar um novo valor (como um case de sucesso, um artigo de blog ou um insight relevante) para reacender a conversa. A abordagem é adaptada ao contexto do lead, aumentando as chances de obter uma resposta.</div>
+                </div>
+                <div class="arrow">&darr;</div>
+                <div class="stage automation">
+                    <div class="stage-title">Follow-up (5D)</div>
+                    <div class="stage-desc">Envia uma mensagem de follow-up e personalizada para leads sem resposta há 5 dias. O conteúdo da mensagem é adaptado à última interação do lead para uma tentativa de reengajamento.</div>
+                </div>
+                <div class="arrow">&darr;</div>
+                <div class="stage automation">
+                    <div class="stage-title">Follow-up (10D)</div>
+                    <div class="stage-desc">Esta etapa envia a última mensagem do nosso fluxo de follow-up ativo. O conteúdo, adaptado ao contexto do lead, geralmente informa que este é o último contato sobre o assunto atual, na tentativa de obter uma resposta definitiva e fechar o ciclo de comunicação.
+                    </div>
+                </div>
+                 <div class="arrow">&darr;</div>
+                <div class="stage automation">
+                    <div class="stage-title">Follow-up (15D)</div>
+                    <div class="stage-desc">Envia uma última e breve mensagem de despedida para leads inativos há 15 dias, encerrando formalmente a conversa. Após o envio, o lead é automaticamente arquivado, limpando o funil de vendas.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="strategy" id="strategy">
+                <h2>Estratégia de Automação de Conexão entre Funis</h2>
+                <ul>
+                    <li><strong>Funil 00 (Recepção) &rarr; Funil 01 (Qualificado):</strong>  Ao responder a qualquer mensagem inicial e ser movido para a etapa "Lead Qualificado" no Funil de Recepção, o lead é automaticamente movido para a etapa inicial "Lead Qualificado (Ponto de Partida)" do Funil 01, e uma tarefa é criada para o vendedor responsável.</li>
+                    <li><strong>Funil 01 (Qualificado) &rarr; Funil 02 (Confirmação):</strong> Assim que o lead agenda uma reunião e é movido para a etapa "Reunião Agendada (Sucesso!)", uma automação o move instantaneamente para a etapa "Agendado Hoje" do Funil de Confirmação, iniciando a sequência de lembretes.</li>
+                    <li><strong>Funil 02 (Confirmação) &rarr; Funil 03 (Propostas):</strong>Após a reunião, o vendedor move o lead manualmente para a etapa "Reunião Realizada". Essa ação dispara um gatilho que cria automaticamente um novo card para esse lead na etapa "Realização de Proposta" do Funil 04.</li>
+                    <li><strong>Funil 03 (Propostas) &rarr; Funil 04 (Onboarding):</strong> Quando uma proposta é aceita e o lead é movido para a etapa "Proposta Fechada", ele é automaticamente transferido para a primeira etapa do Funil de Onboarding ("AGUARDANDO DOCUMENTAÇÃO"), acionando a mensagem de solicitação de documentos.</li>
+                    <li><strong>Qualquer Funil Ativo &rarr; Funil 06 (Follow-up):</strong>Se, em qualquer etapa de um funil ativo (como "Aguardando Resposta" no Funil 00, "Tentativa de Contato" no Funil 01, ou "Proposta Entregue" no Funil 04), um lead permanecer inativo pelo tempo pré-definido, ele será automaticamente movido para a etapa "Entrada Follow-up" do Funil de Follow-up para iniciar a régua de reengajamento.</li>
+                    <li><strong>Funil 06 (Follow-up) &rarr; Funil de Origem:</strong> Quando um lead no Funil de Follow-up responde a uma mensagem e entra na etapa "Retorno Follow-up", a automação é pausada, e o vendedor, após analisar a resposta, move o lead manualmente de volta para a etapa onde ele estava no seu funil de origem (ex: "Tentativa de Contato", "Negociação", etc.) para dar continuidade ao processo.
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
