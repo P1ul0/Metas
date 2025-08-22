@@ -213,18 +213,22 @@
             <h2 class="track-title">--- Fluxo de Conversa Completo: Trilha A ---</h2>
             <div class="persona-info">
                 <h3>Persona: Dra. Amanda, a psicóloga</h3>
-                <p><strong>Ponto de Partida:</strong> O lead vê um anúncio no Instagram e inicia o primeiro contato via Direct Message (DM).</p>
+                <p><strong>Ponto de Partida:</strong> O lead inicia o primeiro contato via Direct Message (DM).</p>
             </div>
 
             <div>
                 <h4 class="phase-title">Fase 1: Captação e Qualificação Inicial</h4>
-                <p class="phase-objective"><strong>Objetivo da Fase:</strong> Engajar o lead instantaneamente de forma automática, coletar informações estratégicas para qualificação e preparar o terreno para uma abordagem humana e personalizada.</p>
+                <p class="phase-objective"><strong>Objetivo da Fase:</strong> Engajar o lead instantaneamente de forma automática, coletar informações estratégicas para qualificação.</p>
                 
                 <div class="step">
                     <h5>1. O Primeiro Contato no Instagram</h5>
                     <div class="dialogue">
-                        <p class="lead"><strong>Dra. Amanda (Lead):</strong> "Tenho interesse"</p>
-                        <p class="vendedor"><strong>Resposta Automática (AI Atende):</strong> "Olá, Dra.! 👋 Vimos que você quer automatizar seu atendimento. Para te mostrar como nossa IA pode gerenciar seus agendamentos e responder seus pacientes com um tom profissional e acolhedor, preencha este formulário rápido. 👉 [Link do Formulário]"</p>
+                        <p class="lead"><strong>Lead:</strong> "Desejo saber como funciona a ia."</p>
+                        <p class="vendedor"><strong>Resposta Automática (AI Atende):</strong> "Olá! Excelente pergunta. Fico feliz em explicar."</p>
+                        <p class="vendedor"><strong>Resposta Automática (AI Atende):</strong> "De forma simples, nossa IA funciona como um atendente 24/7. Nós a 'treinamos' com as informações do seu negócio e ela passa a conversar com seus clientes 24h por dia."</p>
+                        <p class="vendedor"><strong>Resposta Automática (AI Atende):</strong> "Mas para te dar uma explicação que realmente faça sentido para o seu caso, preciso entender um pouco sobre seu negócio. Por isso, criamos um formulário rápido de 1 minuto. Podemos seguir?"</p>
+                        <p class="lead"><strong>Lead:</strong> "Sim, pode mandar o formulário."</p>
+                        <p class="vendedor"><strong>Resposta Automática (AI Atende):</strong> "Perfeito! Aqui está o link: 👉 [Link do Formulário]. Assim que preencher, um especialista te chama no WhatsApp!"</p>
                     </div>
                 </div>
 
@@ -236,27 +240,16 @@
                             <input type="text" id="nicho" value="Psicologia Clínica" readonly>
                             <div class="question-objective"><strong>Objetivo da Pergunta:</strong> Segmentar o lead para personalizar a abordagem. A comunicação com uma psicóloga é diferente da comunicação com o dono de uma oficina.</div>
                         </div>
-
                         <div class="form-group">
-                            <label for="sdr">Sua empresa possui equipe de pré-vendas (SDR)?</label>
-                            <select id="sdr" disabled>
-                                <option selected>Não</option>
-                                <option>Sim</option>
-                            </select>
-                            <div class="question-objective"><strong>Objetivo da Pergunta:</strong> Entender a maturidade comercial do lead. Se "Sim", ele já valoriza processos de venda. Se "Não", o argumento é sobre criar seu primeiro "assistente de vendas" incansável.</div>
+                             <label for="volume">Qual o volume aproximado de novas conversas que você recebe por dia?</label>
+                             <select id="volume" disabled>
+                                 <option>Menos de 10</option>
+                                 <option selected>11 a 30</option>
+                                 <option>31 a 50</option>
+                                 <option>Mais de 50</option>
+                             </select>
+                             <div class="question-objective"><strong>Objetivo da Pergunta:</strong> Quantificar a dor do cliente. Um volume alto indica uma dor maior e qualifica o lead como alta prioridade, além de ajudar a direcionar para o plano correto.</div>
                         </div>
-
-                         <div class="form-group">
-                            <label for="volume">Qual o volume aproximado de novas conversas que você recebe por dia?</label>
-                            <select id="volume" disabled>
-                                <option>Menos de 10</option>
-                                <option selected>11 a 30</option>
-                                <option>31 a 50</option>
-                                <option>Mais de 50</option>
-                            </select>
-                            <div class="question-objective"><strong>Objetivo da Pergunta:</strong> Quantificar a dor do cliente. Um volume alto indica uma dor maior e qualifica o lead como alta prioridade, além de ajudar a direcionar para o plano correto.</div>
-                        </div>
-
                         <div class="form-group">
                             <label for="problema">Descreva um pouco o problema que você está enfrentando:</label>
                             <textarea id="problema" rows="4" readonly>Meu WhatsApp não para. Demoro a responder e perco pacientes. Gostaria de uma solução automática, mas que não soe robótica.</textarea>
@@ -269,7 +262,7 @@
                     <h5>3. A Transição para o Atendimento Humano</h5>
                     <p style="margin-bottom: 1rem;">Com as respostas do formulário, o vendedor agora tem todo o contexto necessário para uma abordagem quente e personalizada no WhatsApp.</p>
                     <div class="dialogue">
-                         <p class="vendedor"><strong>Vendedor:</strong> "Olá, Dra. Amanda, tudo bem? Sou o João, especialista da AI Atende. Vi no seu formulário que você busca uma automação para o WhatsApp que mantenha um atendimento humanizado. É exatamente essa a especialidade da nossa IA Generativa. Ela aprende sobre seu trabalho e cria respostas naturais."</p>
+                         <p class="vendedor"><strong>Vendedor:</strong> "Olá, Dra. Amanda, tudo bem? Sou o João, da AI Atende. Vi no seu formulário que a sobrecarga de mensagens e a demora nas respostas são um desafio. A nossa IA foi criada exatamente para resolver isso, mantendo um tom de voz humanizado."</p>
                     </div>
                 </div>
             </div>
@@ -278,10 +271,8 @@
                 <h4 class="phase-title">Fase 2: Conexão e Agendamento da DEMONSTRAÇÃO</h4>
                 <p class="phase-objective"><strong>Objetivo da Fase:</strong> Transformar o interesse inicial em confiança, quebrar as principais objeções sobre a tecnologia e levar o lead a agendar uma demonstração prática da plataforma.</p>
                 <div class="dialogue">
-                    <p class="lead"><strong>Dra. Amanda (Lead):</strong> "Olá, João. Sim, essa é minha maior preocupação. Tenho muito medo que soe falso ou que a IA cometa algum erro com um paciente que está num momento vulnerável."</p>
-                    <p class="vendedor"><strong>Vendedor:</strong> "Entendo 100% sua preocupação, Dra. Amanda. É a dúvida mais comum e pertinente, especialmente na sua área. O objetivo da nossa tecnologia não é substituir seu cuidado, mas sim **libertar você do trabalho repetitivo que te causa stress e te impede de focar no que realmente importa: a terapia.** A IA lida com agendamentos e perguntas iniciais para que você não precise mais ser interrompida ou sentir a ansiedade da caixa de entrada lotada ao final do dia."</p>
-                    <p class="vendedor"><strong>Vendedor:</strong> "A plataforma permite que você defina a 'personalidade' e os limites da IA. Ela nunca inventará informações, só trabalha com os dados que você fornece. A melhor forma de ver isso é na prática."</p>
-                    <p class="vendedor"><strong>Vendedor:</strong> "Que tal agendarmos uma **demonstração ao vivo de 20 minutos**? Eu compartilho minha tela e te mostro a 'secretária virtual' funcionando. Podemos até fazer um breve treinamento nela com um texto do seu site e ver como ela responderia a um paciente na hora. O que acha? Aqui minha agenda: [Link do Calendly]"</p>
+                    <p class="lead"><strong>Dra. Amanda (Lead):</strong> "Olá, João. Sim, minha maior preocupação é a segurança e que a IA não soe robótica com um paciente."</p>
+                    <p class="vendedor"><strong>Vendedor:</strong> "Compreendo 100%. O objetivo é te dar paz e tempo, não substituir seu cuidado. A IA é treinada com seus protocolos e qualquer assunto delicado é transferido para você. A melhor forma de ver essa segurança é em uma demonstração rápida de 20 minutos. Podemos agendar para amanhã às 14h?"</p>
                 </div>
             </div>
 
@@ -289,12 +280,11 @@
                 <h4 class="phase-title">Fase 3: Conversão</h4>
                 <p class="phase-objective"><strong>Objetivo da Fase:</strong> Provar o valor da solução de forma irrefutável durante a demonstração, apresentar os planos de forma clara, e conduzir o lead ao fechamento, reforçando o alívio da sua dor principal.</p>
                  <div class="dialogue">
-                    <p class="vendedor"><strong>Vendedor (no dia da DEMO, via WhatsApp):</strong> "Bom dia, Dra. Amanda! Ansioso para nossa conversa daqui a pouco, às 10h. Tenho certeza que você vai gostar do que vai ver! 😉 O link é este: [Link do Google Meet]"</p>
-                    <p class="vendedor"><strong>Vendedor (pós-demo):</strong> "Dra. Amanda, foi um prazer te mostrar a plataforma! Conforme conversamos, estou enviando os planos no seu e-mail. Qualquer dúvida, estou aqui."</p>
-                    <p class="vendedor"><strong>Vendedor (2 dias depois):</strong> "Olá, Dra. Amanda! Sei que a decisão envolve muitos pontos. Pense em como seria terminar seu dia de trabalho e **não ter aquela obrigação de 'zerar o WhatsApp', podendo finalmente se desligar e ter sua noite de volta.** Nossos clientes relatam que a maior mudança não é só no negócio, mas na **paz de espírito**. É sobre acabar com a sensação de estar sempre 'de plantão'. Conseguiu analisar os planos?"</p>
-                    <p class="lead"><strong>Dra. Amanda (Lead):</strong> "Olá, João. Adorei a demonstração. **Preciso acabar com essa loucura de responder mensagens o dia todo.** Vamos começar com o plano profissional."</p>
-                    <p class="vendedor"><strong>Vendedor:</strong> "Excelente escolha, Dra. Amanda! Bem-vinda à automação inteligente! Vou te enviar o link de pagamento e, em seguida, o acesso à plataforma para já agendarmos sua sessão de onboarding. 🎉"</p>
-                </div>
+                    <p class="lead"><strong>Dra. Amanda (Lead):</strong> "Amanhã às 14h está ótimo."</p>
+                    <p class="vendedor"><strong>Vendedor:</strong> "Combinado! Convite enviado. [Após a DEMO] Dra. Amanda, como viu, a plataforma é segura e vai te devolver muitas horas na semana. A proposta do plano profissional está em seu e-mail. Podemos dar andamento?"</p>
+                    <p class="lead"><strong>Dra. Amanda (Lead):</strong> "Sim, João. Adorei. Vamos começar."</p>
+                    <p class="vendedor"><strong>Vendedor:</strong> "Excelente escolha! Bem-vinda à AI Atende. Enviando agora os próximos passos para o onboarding. 🎉"</p>
+                 </div>
             </div>
 
             <div>
@@ -316,26 +306,19 @@
             <h2 class="track-title">--- Fluxo de Conversa Completo: Trilha B ---</h2>
             <div class="persona-info">
                 <h3>Persona: Dr. Ricardo, cirurgião plástico de renome</h3>
-                <p><strong>Ponto de Partida:</strong> O Dr. Ricardo clica em um anúncio de alta performance e inicia a conversa no WhatsApp.</p>
+                <p><strong>Ponto de Partida:</strong> O Dr. Ricardo clica em um anúncio de alta performance e inicia a conversa no WhatsApp com uma mensagem genérica.</p>
             </div>
 
             <div>
-                <h4 class="phase-title">Fase 1: Captação e Qualificação Inicial</h4>
-                <p class="phase-objective"><strong>Objetivo da Fase:</strong> Validar o alto potencial do lead, alinhar a solução com suas preocupações sobre qualidade e exclusividade, e estabelecer autoridade desde o primeiro contato.</p>
+                <h4 class="phase-title">Fase 1 e 2: Contato Direto e Agendamento</h4>
+                <p class="phase-objective"><strong>Objetivo:</strong> Identificar a dor e agendar a demonstração no menor tempo possível, respeitando o perfil direto e ocupado do lead.</p>
                 <div class="dialogue">
-                    <p class="lead"><strong>Dr. Ricardo (Lead):</strong> "Gostaria de entender como essa tecnologia de IA funciona para clínicas."</p>
-                    <p class="vendedor"><strong>Vendedor:</strong> "Olá, Dr. Ricardo. Sou o João, especialista da AI Atende. Que ótimo ver seu interesse. Para clínicas de alto padrão como a sua, nossa IA atua como uma assistente virtual treinada para manter o nível de exclusividade e precisão que seus pacientes esperam."</p>
-                    <p class="vendedor"><strong>Vendedor:</strong> "Geralmente, cirurgiões de destaque nos procuram por dois motivos: garantir que 100% das novas consultas sejam respondidas instantaneamente com a máxima discrição, ou para filtrar as perguntas iniciais e garantir que sua equipe foque apenas nos pacientes prontos para agendar. Qual desses pontos é mais crítico para o senhor hoje?"</p>
-                </div>
-            </div>
-
-            <div>
-                <h4 class="phase-title">Fase 2: Conexão e Agendamento da DEMONSTRAÇÃO</h4>
-                <p class="phase-objective"><strong>Objetivo da Fase:</strong> Transformar o interesse inicial em confiança, quebrar as principais objeções sobre qualidade, segurança e imagem de marca, e levar o lead a agendar uma demonstração.</p>
-                <div class="dialogue">
-                    <p class="lead"><strong>Dr. Ricardo (Lead):</strong> "O filtro de perguntas iniciais é o mais relevante. Minha equipe é excelente, mas fica sobrecarregada. Entendi o conceito, mas minha preocupação é a qualidade. A comunicação com meus pacientes é extremamente delicada. Um bot pode passar a imagem de um atendimento impessoal ou, pior, cometer um erro técnico."</p>
-                    <p class="vendedor"><strong>Vendedor:</strong> "É a preocupação mais importante, Dr. Ricardo, e a razão pela qual usamos IA Generativa e não bots comuns. Ela não segue scripts, ela aprende com *seus* protocolos. E, para garantir segurança total, definimos 'gatilhos de transbordo': qualquer pergunta sobre conselhos médicos ou complicações é **imediatamente transferida para sua secretária humana.** A IA lida com 95% do volume (agendamentos, perguntas sobre pré-operatório, localização) para que sua equipe possa dar atenção total aos 5% mais complexos."</p>
-                     <p class="vendedor"><strong>Vendedor:</strong> "A melhor forma de ver como mantemos o padrão de excelência é em uma demonstração. Podemos agendar uma chamada de 20 minutos para eu lhe mostrar como a IA se comportaria no cenário da sua clínica?"</p>
+                    <p class="lead"><strong>Dr. Ricardo (Lead):</strong> "Tenho interesse."</p>
+                    <p class="vendedor"><strong>Vendedor:</strong> "Olá, Dr. Ricardo. Sou o João, da AI Atende. Qual o principal desafio no seu atendimento que o fez buscar uma solução de IA?"</p>
+                    <p class="lead"><strong>Dr. Ricardo (Lead):</strong> "A sobrecarga da minha equipe no primeiro contato e a demora nas respostas."</p>
+                    <p class="vendedor"><strong>Vendedor:</strong> "Entendido. A IA resolve exatamente isso, garantindo resposta imediata 24/7 e qualificando os contatos. Posso te mostrar como em uma demonstração de 15 minutos? Tenho um horário amanhã às 10h."</p>
+                    <p class="lead"><strong>Dr. Ricardo (Lead):</strong> "Amanhã não consigo. Pode ser na segunda às 15h? Minha única preocupação é a qualidade, não pode soar como um robô."</p>
+                    <p class="vendedor"><strong>Vendedor:</strong> "Sem problemas. A qualidade é nossa prioridade. Na chamada, mostro os protocolos de segurança e o treinamento da IA. Confirmado para segunda às 15h. Convite enviado. Até lá, Doutor."</p>
                 </div>
             </div>
 
@@ -343,13 +326,12 @@
                 <h4 class="phase-title">Fase 3: Conversão</h4>
                 <p class="phase-objective"><strong>Objetivo da Fase:</strong> Provar o valor da solução, focando em como a tecnologia eleva a percepção de marca e a eficiência operacional, e conduzir ao fechamento.</p>
                  <div class="dialogue">
-                    <p class="vendedor"><strong>Vendedor (pós-demo):</strong> "Dr. Ricardo, agradeço seu tempo. Espero ter demonstrado como a IA pode ser uma poderosa aliada para otimizar a jornada do seu paciente, mantendo o alto padrão da sua clínica. A proposta com os detalhes do nosso plano premium está em seu e-mail."</p>
-                    <p class="vendedor"><strong>Vendedor (3 dias depois):</strong> "Olá, Dr. Ricardo. Sei que sua agenda é complexa. Só queria reforçar um ponto: pense no impacto de garantir que cada novo paciente que entra em contato com sua clínica, a qualquer hora do dia ou da noite, receba uma resposta imediata, profissional e precisa. É sobre elevar ainda mais a percepção de excelência do seu atendimento desde o primeiro segundo."</p>
+                    <p class="vendedor"><strong>Vendedor (pós-demo):</strong> "Dr. Ricardo, obrigado pelo seu tempo. A proposta do plano premium que discutimos já está em seu e-mail. Fico à disposição."</p>
+                    <p class="vendedor"><strong>Vendedor (3 dias depois):</strong> "Olá, Dr. Ricardo. Um lembrete sobre a proposta. A resposta imediata da IA é o que eleva a percepção de excelência da sua clínica desde o primeiro contato."</p>
                     <p class="lead"><strong>Dr. Ricardo (Lead):</strong> "João, analisei a proposta. A tecnologia me pareceu robusta. Vamos dar andamento."</p>
                     <p class="vendedor"><strong>Vendedor:</strong> "Excelente decisão, Doutor. Tenho certeza que será uma parceria de grande sucesso. Estou enviando os próximos passos para o onboarding da sua nova assistente virtual."</p>
                 </div>
             </div>
-
             <div>
                 <h4 class="phase-title">Pós-Venda (Expansão e Sucesso do Cliente)</h4>
                 <p class="phase-objective"><strong>Objetivo da Fase:</strong> Utilizar os dados de sucesso para provar o valor e identificar oportunidades de otimização estratégica para o cliente, oferecendo soluções de maior valor agregado.</p>
