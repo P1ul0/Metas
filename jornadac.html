@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Atende | Jornada Completa de Venda e Expansão</title>
+    <title>AI Atende | Fluxos de Conversa Completos</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary-color: #4A90E2;
             --secondary-color: #50E3C2;
-            --dark-color: #333;
-            --light-color: #f8f9fa;
-            --gray-color: #6c757d;
+            --dark-color: #2c3e50;
+            --light-color: #f4f6f9;
+            --gray-color: #7f8c8d;
             --white-color: #fff;
             --border-radius: 8px;
-            --box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            --box-shadow: 0 5px 20px rgba(0,0,0,0.08);
         }
 
         * {
@@ -42,7 +42,6 @@
             color: var(--white-color);
             padding: 2.5rem 0;
             text-align: center;
-            border-bottom: 5px solid var(--primary-color);
         }
 
         header h1 {
@@ -64,7 +63,7 @@
             padding: 2.5rem 0;
         }
 
-        .phase {
+        .track-flow {
             background: var(--white-color);
             margin-bottom: 3rem;
             padding: 2.5rem;
@@ -72,99 +71,84 @@
             box-shadow: var(--box-shadow);
         }
         
-        .phase-title {
-            font-size: 2.2rem;
-            color: var(--primary-color);
+        .track-title {
+            font-size: 2.5rem;
             font-weight: 700;
-            margin-bottom: 1.5rem;
-            border-bottom: 2px solid var(--light-color);
-            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            text-align: center;
+        }
+
+        .persona-info {
+            background: var(--light-color);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 2rem;
+            border-left: 5px solid var(--primary-color);
         }
         
-        .track-title {
+        .persona-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .persona-info p {
+            color: var(--gray-color);
+        }
+        
+        .phase-title {
             font-size: 1.8rem;
             font-weight: 600;
-            margin-top: 2rem;
-            margin-bottom: 1.5rem;
-            color: var(--dark-color);
-        }
-
-        .example {
-            margin-bottom: 2.5rem;
-            padding: 1.5rem;
-            background: #fdfdfd;
-            border: 1px solid #eee;
-            border-left: 4px solid var(--primary-color);
-            border-radius: var(--border-radius);
-        }
-        
-        .pos-venda .example {
-             border-left-color: var(--secondary-color);
-        }
-        
-        .example:last-of-type {
-            margin-bottom: 0;
-        }
-
-        .example-title {
-            font-weight: 700;
-            font-size: 1.3rem;
-            color: var(--dark-color);
+            margin-top: 2.5rem;
             margin-bottom: 1rem;
+            color: var(--dark-color);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 0.75rem;
         }
 
-        .pain-point, .crm-comment, .trigger, .value-offer {
-            background-color: #fffbe6;
-            border-left: 4px solid #f59e0b;
-            padding: 1rem 1.5rem;
-            margin: 1rem 0;
-            border-radius: 4px;
+        .phase-objective {
             font-style: italic;
-            color: #b45309;
-        }
-        
-        .trigger {
-            background-color: #f0f9ff;
-            border-left-color: #3b82f6;
-            color: #1e40af;
-        }
-        
-        .value-offer {
-            background-color: #f0fdf4;
-            border-left-color: #22c55e;
-            color: #15803d;
-            font-style: normal;
-        }
-
-        .step {
-            margin-bottom: 1.5rem;
-        }
-
-        .step-label {
-            display: block;
             color: var(--gray-color);
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-            font-size: 1rem;
-        }
-        
-        .dialogue {
-            background: #f9f9f9;
+            margin-bottom: 2rem;
+            background-color: #f8f9fa;
             padding: 1rem;
             border-radius: var(--border-radius);
-            border: 1px solid #eee;
+            border-left: 3px solid var(--secondary-color);
         }
-
+        
         .dialogue p {
+            padding: 1rem 1.5rem;
+            border-radius: var(--border-radius);
             margin-bottom: 1rem;
+            max-width: 90%;
         }
 
-        .dialogue p:last-child {
-            margin-bottom: 0;
+        .dialogue .lead {
+            background-color: #e3f2fd;
+            border: 1px solid #bbdefb;
+            margin-right: auto;
+        }
+        
+        .dialogue .vendedor {
+             background: #e8f5e9;
+             border: 1px solid #c8e6c9;
+             margin-left: auto;
+             text-align: left;
         }
         
         .dialogue strong {
-            color: #333;
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .upsell-scenario {
+            padding: 1.5rem;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            background: #fdfdfd;
         }
         
         footer {
@@ -180,212 +164,151 @@
 
     <header>
         <div class="container">
-            <h1>Jornada de Venda para Bot de IA Generativa (<span class="brand">Secretária Virtual</span>)</h1>
-            <p>Um Roteiro Completo para Aquisição e Expansão de Clientes</p>
+            <h1>Fluxos de Conversa Completos</h1>
+            <p>Da Qualificação à Expansão com a <span class="brand">AI Atende</span></p>
         </div>
     </header>
 
     <main class="container">
 
-        <section id="fase1" class="phase">
-            <h2 class="phase-title">Fase 1: Captação e Qualificação</h2>
-            
-            <h3 class="track-title">Trilha A: Lead via Instagram Direct</h3>
-            
-            <div class="example">
-                <h4 class="example-title">Exemplo 1: Dra. Amanda, psicóloga.</h4>
-                <div class="pain-point"><strong>Dor:</strong> A caixa de entrada do WhatsApp e Instagram está sempre lotada. Ela só consegue responder no fim do dia, perdendo o timing de novos pacientes.</div>
-                <div class="step">
-                    <span class="step-label">Etapa 1 (Automação no Instagram):</span>
-                    <div class="dialogue">Dra. Amanda vê um anúncio "Sua clínica respondendo pacientes 24/7 com Inteligência Artificial" e envia "Tenho interesse".</div>
-                </div>
-                <div class="step">
-                    <span class="step-label">Resposta Automática:</span>
-                    <div class="dialogue">"Olá, Dra.! 👋 Vimos que você quer automatizar seu atendimento. Para te mostrar como nossa IA pode gerenciar seus agendamentos e responder seus pacientes com um tom profissional e acolhedor, preencha este formulário rápido. 👉 [Link do Formulário]"</div>
-                </div>
-                <div class="step">
-                    <span class="step-label">Etapa 2 (Preenchimento do Formulário):</span>
-                    <div class="dialogue"><strong>Problema:</strong> "Meu WhatsApp não para. Demoro a responder e perco pacientes. Gostaria de uma solução automática, mas que não soe robótica."</div>
-                </div>
-                <div class="step">
-                    <span class="step-label">Etapa 3 (Contato Pós-Formulário no WhatsApp):</span>
-                    <div class="dialogue"><strong>Vendedor:</strong> "Olá, Dra. Amanda, tudo bem? Sou o João, especialista da [Sua Empresa]. Vi no seu formulário que você busca uma automação para o WhatsApp que mantenha um atendimento humanizado. É exatamente essa a especialidade da nossa IA Generativa. Ela aprende sobre seu trabalho e cria respostas naturais."</div>
+        <section class="track-flow">
+            <h2 class="track-title">--- Fluxo de Conversa Completo: Trilha A ---</h2>
+            <div class="persona-info">
+                <h3>Persona: Dra. Amanda, a psicóloga</h3>
+                <p><strong>Ponto de Partida:</strong> O vendedor inicia o contato via WhatsApp após a Dra. Amanda preencher o formulário vindo do Instagram.</p>
+            </div>
+
+            <div>
+                <h4 class="phase-title">Fase 2: Conexão e Agendamento da DEMONSTRAÇÃO</h4>
+                <p class="phase-objective"><strong>Objetivo da Fase:</strong> Transformar o interesse inicial em confiança, quebrar as principais objeções sobre a tecnologia e levar o lead a agendar uma demonstração prática da plataforma.</p>
+                <div class="dialogue">
+                    <p class="vendedor"><strong>Vendedor:</strong> "Olá, Dra. Amanda, tudo bem? Sou o João, especialista da AI Atende. Vi no seu formulário que você busca uma automação para o WhatsApp que mantenha um atendimento humanizado. É exatamente essa a especialidade da nossa IA Generativa. Ela aprende sobre seu trabalho e cria respostas naturais."</p>
+                    <p class="lead"><strong>Dra. Amanda (Lead):</strong> "Olá, João. Sim, essa é minha maior preocupação. Tenho muito medo que soe falso ou que a IA cometa algum erro com um paciente que está num momento vulnerável."</p>
+                    <p class="vendedor"><strong>Vendedor:</strong> "Entendo 100% sua preocupação, Dra. Amanda. É a dúvida mais comum e pertinente, especialmente na sua área. O objetivo da nossa tecnologia não é substituir seu cuidado, mas sim **libertar você do trabalho repetitivo que te causa stress e te impede de focar no que realmente importa: a terapia.** A IA lida com agendamentos e perguntas iniciais para que você não precise mais ser interrompida ou sentir a ansiedade da caixa de entrada lotada ao final do dia."</p>
+                    <p class="vendedor"><strong>Vendedor:</strong> "A plataforma permite que você defina a 'personalidade' e os limites da IA. Ela nunca inventará informações, só trabalha com os dados que você fornece. A melhor forma de ver isso é na prática."</p>
+                    <p class="vendedor"><strong>Vendedor:</strong> "Que tal agendarmos uma **demonstração ao vivo de 20 minutos**? Eu compartilho minha tela e te mostro a 'secretária virtual' funcionando. Podemos até fazer um breve treinamento nela com um texto do seu site e ver como ela responderia a um paciente na hora. O que acha? Aqui minha agenda: [Link do Calendly]"</p>
                 </div>
             </div>
 
-            <div class="example">
-                <h4 class="example-title">Exemplo 2: Roberto, dono de uma oficina mecânica premium.</h4>
-                <div class="pain-point"><strong>Dor:</strong> Clientes enviam dezenas de mensagens por dia com fotos e perguntas para orçamento, e a conversa se arrasta por dias.</div>
-                <div class="step">
-                    <span class="step-label">Etapa 1 (Automação no Instagram):</span>
-                    <div class="dialogue">Roberto vê o anúncio "Chega de perder o dia no WhatsApp. Deixe nossa IA fazer os orçamentos por você" e manda "Info".</div>
-                </div>
-                <div class="step">
-                    <span class="step-label">Resposta Automática:</span>
-                    <div class="dialogue">"Opa, tudo certo? Pronto para ter um robô inteligente trabalhando para você? Para te mostrarmos como nossa IA pode qualificar clientes e agendar serviços, preencha essas informações rápidas aqui: 👉 [Link do Formulário]"</div>
-                </div>
-                <div class="step">
-                    <span class="step-label">Etapa 2 (Preenchimento do Formulário):</span>
-                    <div class="dialogue"><strong>Problema:</strong> "Recebo dezenas de mensagens para orçamento. Preciso de um bot que faça as perguntas certas (carro, ano, serviço) antes de a conversa chegar em mim."</div>
-                </div>
-                <div class="step">
-                    <span class="step-label">Etapa 3 (Contato Pós-Formulário no WhatsApp):</span>
-                    <div class="dialogue"><strong>Vendedor:</strong> "Boa tarde, Roberto! Aqui é a Bia, da [Sua Empresa]. Vi no seu formulário a necessidade de um bot que qualifique os orçamentos. Nossa plataforma permite que você treine a IA com suas informações de serviços e preços para que ela faça essa triagem de forma 100% automática."</div>
+            <div>
+                <h4 class="phase-title">Fase 3: Conversão</h4>
+                <p class="phase-objective"><strong>Objetivo da Fase:</strong> Provar o valor da solução de forma irrefutável durante a demonstração, apresentar os planos de forma clara, e conduzir o lead ao fechamento, reforçando o alívio da sua dor principal.</p>
+                 <div class="dialogue">
+                    <p class="vendedor"><strong>Vendedor (no dia da DEMO, via WhatsApp):</strong> "Bom dia, Dra. Amanda! Ansioso para nossa conversa daqui a pouco, às 10h. Tenho certeza que você vai gostar do que vai ver! 😉 O link é este: [Link do Google Meet]"</p>
+                    <p class="vendedor"><strong>Vendedor (pós-demo):</strong> "Dra. Amanda, foi um prazer te mostrar a plataforma! Conforme conversamos, estou enviando os planos no seu e-mail. Qualquer dúvida, estou aqui."</p>
+                    <p class="vendedor"><strong>Vendedor (2 dias depois):</strong> "Olá, Dra. Amanda! Sei que a decisão envolve muitos pontos. Pense em como seria terminar seu dia de trabalho e **não ter aquela obrigação de 'zerar o WhatsApp', podendo finalmente se desligar e ter sua noite de volta.** Nossos clientes relatam que a maior mudança não é só no negócio, mas na **paz de espírito**. É sobre acabar com a sensação de estar sempre 'de plantão'. Conseguiu analisar os planos?"</p>
+                    <p class="lead"><strong>Dra. Amanda (Lead):</strong> "Olá, João. Adorei a demonstração. **Preciso acabar com essa loucura de responder mensagens o dia todo.** Vamos começar com o plano profissional."</p>
+                    <p class="vendedor"><strong>Vendedor:</strong> "Excelente escolha, Dra. Amanda! Bem-vinda à automação inteligente! Vou te enviar o link de pagamento e, em seguida, o acesso à plataforma para já agendarmos sua sessão de onboarding. 🎉"</p>
                 </div>
             </div>
 
-            <h3 class="track-title">Trilha B: Lead via Campanha de Mensagem no WhatsApp</h3>
-
-            <div class="example">
-                <h4 class="example-title">Exemplo 1: Juliana, arquiteta.</h4>
-                <div class="pain-point"><strong>Dor:</strong> Muitos contatos iniciais curiosos por mensagem. Ela quer um filtro antes de dedicar seu tempo.</div>
-                <div class="step">
-                    <span class="step-label">Etapa 1 (Conversa Inicial):</span>
+            <div>
+                <h4 class="phase-title">Pós-Venda (Expansão e Sucesso do Cliente)</h4>
+                <p class="phase-objective"><strong>Objetivo da Fase:</strong> Garantir o sucesso do cliente com a solução inicial e, através de monitoramento proativo, identificar novas dores e oportunidades para expandir a parceria, aumentando o LTV do cliente.</p>
+                <div class="upsell-scenario">
                     <div class="dialogue">
-                        <p>Juliana clica no anúncio "Treine uma IA com seu portfólio e deixe ela encontrar seus melhores clientes".</p>
-                        <p><strong>Juliana (Lead):</strong> "Como a IA pode me ajudar com as mensagens?"</p>
-                        <p><strong>Vendedor:</strong> "Olá Juliana, tudo bem? Sou o João, da [Sua Empresa]. Funciona assim: nós 'treinamos' nossa IA Generativa com as informações do seu escritório - seu portfólio, seu processo de trabalho, respostas comuns. Ela aprende e passa a conversar com os leads, qualificando quem tem real potencial. O objetivo é que você só entre na conversa para fechar o projeto."</p>
-                        <p><strong>Juliana (Lead):</strong> "Interessante, mas não fica muito robótico?"</p>
-                        <p><strong>Vendedor:</strong> "É aí que está a mágica da IA Generativa, diferente dos bots antigos. Ela cria as respostas, não apenas segue um script. O resultado é uma conversa muito mais fluida e natural."</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="example">
-                <h4 class="example-title">Exemplo 2: Dono de um e-commerce de produtos artesanais.</h4>
-                <div class="pain-point"><strong>Dor:</strong> Clientes perguntam sobre status do pedido, frete e detalhes do produto o dia todo no WhatsApp e Instagram.</div>
-                <div class="step">
-                    <span class="step-label">Etapa 1 (Conversa Inicial):</span>
-                    <div class="dialogue">
-                        <p>Clica no anúncio "Seu SAC no piloto automático com a IA que conhece seus produtos".</p>
-                        <p><strong>Dono da Loja (Lead):</strong> "Preciso automatizar o atendimento da minha loja."</p>
-                        <p><strong>Vendedor:</strong> "Oi, [Nome do Lead]! Meu nome é Bia, seja bem-vindo! Perfeito. Nossa IA pode ser treinada com seus catálogos de produtos, políticas de frete e troca. Ela passa a responder 90% das perguntas dos seus clientes de forma instantânea, 24 horas por dia. O que mais te sobrecarrega hoje: dúvidas sobre produtos ou sobre entregas?"</p>
-                    </div>
-                </div>
-            </div>
-            
-            <h3 class="track-title">Trilha C: Lead Partner (via Kommo CRM com "Comment")</h3>
-            
-            <div class="example">
-                <h4 class="example-title">Exemplo 1: Clínica de Estética.</h4>
-                <div class="crm-comment"><strong>"Comment" no CRM:</strong> "Indicado pela agência [Nome da Agência]. Campanha gerando altíssimo volume de DMs, equipe não dá conta, perdendo agendamentos. Precisam de automação urgente."</div>
-                <div class="step">
-                    <span class="step-label">Etapa 1 e 2 (Contato Hiper-Personalizado):</span>
-                    <div class="dialogue"><strong>Vendedor:</strong> "Olá, [Nome da Sócia], tudo bem? Sou o João, da [Sua Empresa]. A agência [Nome da Agência] nos indicou. Eles nos contaram do sucesso da campanha e do desafio em responder tantos leads. Nossa plataforma de IA Generativa pode assumir 100% desse fluxo, respondendo e agendando avaliações diretamente na sua agenda, 24 horas por dia, até de madrugada."</div>
-                </div>
-            </div>
-            
-            <div class="example">
-                <h4 class="example-title">Exemplo 2: Empresa de cursos online.</h4>
-                <div class="crm-comment"><strong>"Comment" no CRM:</strong> "Cliente da consultoria [Nome da Consultoria]. O atendimento via WhatsApp para tirar dúvidas de novos alunos é lento, impactando a conversão. Precisam de uma solução escalável."</div>
-                <div class="step">
-                    <span class="step-label">Etapa 1 e 2 (Contato Hiper-Personalizado):</span>
-                    <div class="dialogue"><strong>Vendedor:</strong> "Boa tarde, [Nome do Sócio]. Aqui é a Bia, da [Sua Empresa]. O [Nome do Consultor] nos indicou, mencionando o desafio de responder a todos os potenciais alunos com agilidade. Nossa IA pode ser treinada com todo o conteúdo do seu curso e FAQs para responder dúvidas, quebrar objeções e guiar o lead até o checkout, funcionando como um vendedor incansável."</div>
-                </div>
-            </div>
-        </section>
-
-        <section id="fase2" class="phase">
-            <h2 class="phase-title">Fase 2: Conexão e Agendamento da DEMONSTRAÇÃO</h2>
-            <div class="example">
-                <h4 class="example-title">Vamos seguir com a Dra. Amanda, a psicóloga.</h4>
-                <div class="step">
-                    <span class="step-label">Etapa 3 (Quebra de Objeções e Geração de Valor):</span>
-                    <div class="dialogue">
-                        <p><strong>Vendedor:</strong> "...ela aprende sobre seu trabalho e cria respostas naturais."</p>
-                        <p><strong>Dra. Amanda (Lead):</strong> "Tenho muito medo que soe falso ou que a IA cometa algum erro com um paciente."</p>
-                        <p><strong>Vendedor:</strong> "Entendo 100% sua preocupação, Dra. Amanda. É a dúvida mais comum e pertinente. Por isso, a plataforma permite que você defina a 'personalidade' e os limites da IA. Ela nunca inventará informações. Ela só trabalha com os dados que você fornece (seu site, artigos, FAQs). A melhor forma de ver isso é na prática."</p>
-                    </div>
-                </div>
-                <div class="step">
-                    <span class="step-label">Etapa 4 (Chamada para Ação - Agendamento da DEMO):</span>
-                    <div class="dialogue"><strong>Vendedor:</strong> "Que tal agendarmos uma demonstração ao vivo de 20 minutos? Eu compartilho minha tela e te mostro a “secretária virtual” funcionando. Podemos até fazer um breve treinamento na “secretária virtual” que utilizamos para teste e ver como a “secretária virtual” responderia a um paciente na hora. O que acha? Aqui minha agenda: [Link do Agenda]"</div>
-                </div>
-            </div>
-        </section>
-
-        <section id="fase3" class="phase">
-            <h2 class="phase-title">Fase 3: Conversão</h2>
-            <div class="example">
-                <div class="step">
-                    <span class="step-label">Etapa 5 (Nutrição Pré-DEMO):</span>
-                    <div class="dialogue">Dra. Amanda agenda e recebe os lembretes.</div>
-                </div>
-                <div class="step">
-                    <span class="step-label">Etapa 6 (A Demonstração):</span>
-                    <div class="dialogue">O vendedor compartilha a tela. Ele coleta informações da empresa do lead. Ele simula um chat: "Veja, perguntei o preço da consulta e ela respondeu exatamente como configuramos. Agora perguntei sobre a ansiedade e ela usou a informação de um artigo do seu blog para dar uma resposta acolhedora."</div>
-                </div>
-                <div class="step">
-                    <span class="step-label">Etapa 7 (Envio da Proposta e Follow-up):</span>
-                    <div class="dialogue">
-                        <p>A proposta agora é sobre planos de assinatura.</p>
-                        <p><strong>Vendedor (pós-demo):</strong> "Dra. Amanda, foi um prazer te mostrar a plataforma! Conforme conversamos, estou enviando os planos no seu e-mail. Qualquer dúvida, estou aqui."</p>
-                        <p><strong>Vendedor (2 dias depois):</strong> "Olá, Dra. Amanda! Sei que a decisão envolve muitos pontos. Só para adicionar um dado: clientes da área da saúde que implementam nossa IA conseguem focar 100% nos seus pacientes, relatando uma melhora na própria qualidade de vida. Pense nas horas que você ganharia de volta na sua semana. Conseguiu analisar os planos?"</p>
-                    </div>
-                </div>
-                <div class="step">
-                    <span class="step-label">Etapa 8 (Fechamento e Onboarding):</span>
-                    <div class="dialogue">
-                        <p><strong>Dra. Amanda (Lead):</strong> "Olá, João. Adorei a demonstração. Vamos começar com o plano profissional."</p>
-                        <p><strong>Vendedor:</strong> "Excelente escolha, Dra. Amanda! Bem-vinda à AI Atende! Vou te enviar o link de pagamento e, em seguida, o acesso à plataforma para já agendarmos sua sessão de onboarding, onde vamos treinar e ativar a sua IA juntos. 🎉"</p>
+                        <p class="vendedor"><strong>Vendedor:</strong> "Olá, Dra. Amanda, tudo bem? Passando para saber como tem sido sua rotina sem a sobrecarga de responder mensagens."</p>
+                        <p class="lead"><strong>Dra. Amanda (Cliente):</strong> "Oi, João! Tem sido ótimo, uma paz que eu não tinha há tempos. A IA está funcionando muito bem."</p>
+                        <p class="vendedor"><strong>Vendedor:</strong> "Que feedback excelente! Fico muito feliz. Notei aqui nos nossos relatórios que você está recebendo contatos tanto do Instagram quanto de indicações que chegam pelo seu site. Me diga uma coisa, hoje você sabe qual desses dois canais está trazendo os pacientes que realmente fecham o processo terapêutico com você?"</p>
+                        <p class="lead"><strong>Dra. Amanda (Cliente):</strong> "Puxa, nunca parei pra pensar. Eu acho que é mais do Instagram, mas não tenho certeza."</p>
+                        <p class="vendedor"><strong>Vendedor:</strong> "Essa é uma informação valiosíssima. Nós temos uma versão do nosso **dashboard de análise** que podemos liberar para você. Nele, você conseguiria ver em tempo real, de forma super visual, de onde vêm seus melhores pacientes. Isso te daria uma clareza total sobre onde investir seu tempo e energia para divulgar seu trabalho. Faz sentido conversarmos 15 minutos sobre isso?"</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="pos-venda" class="phase">
-            <h2 class="phase-title">Pós-Venda:</h2>
-
-            <div class="example">
-                <h4 class="example-title">Cenário 1: Oferecendo o Serviço de Fluxo de Follow-up</h4>
-                <div class="step">
-                    <span class="step-label">Cliente:</span>
-                    <div class="dialogue">Roberto, dono da oficina mecânica premium.</div>
-                </div>
-                <div class="step">
-                    <span class="step-label">Serviço Inicial Contratado:</span>
-                    <div class="dialogue">Bot de IA Generativa para qualificação inicial e agendamento.</div>
-                </div>
-                <div class="trigger"><strong>Gatilho (O que o monitoramento revelou):</strong> O Dashboard de análise interna da sua equipe mostra que o Kommo CRM de Roberto tem um grande número de leads (ex: 180 leads) parados na etapa "Orçamento Enviado" há mais de 10 dias.</div>
-                <div class="pain-point"><strong>A Dor Identificada:</strong> Roberto e sua equipe estão sobrecarregados com o trabalho manual e, após o esforço inicial de qualificar e enviar o orçamento, não têm tempo nem processo para fazer o acompanhamento (follow-up). Isso resulta em dezenas de vendas potenciais "esfriando" e sendo perdidas, um enorme vazamento no funil de vendas. É dinheiro deixado na mesa.</div>
-                <div class="step">
-                    <span class="step-label">A Abordagem Consultiva (Script do Vendedor):</span>
-                    <div class="dialogue"><strong>Vendedor:</strong> "Olá, Roberto, tudo bem? Liguei para saber como estão as coisas e vi aqui que nossa IA já está fazendo o primeiro atendimento de 100% dos seus contatos no WhatsApp, que ótimo resultado! Analisando os dados do seu funil no nosso dashboard, notei uma oportunidade incrível para você faturar mais este mês. Vimos que há cerca de 180 clientes que receberam um orçamento nos últimos 30 dias, mas a conversa não avançou. Eu sei que na correria da oficina é quase impossível ter tempo para ir atrás de cada um deles, certo? Por isso, a gente acaba deixando esse dinheiro na mesa. Pensando nisso, temos um serviço complementar onde configuramos um fluxo de follow-up inteligente com a IA. Ela pode, de forma automática, reativar esses contatos com uma mensagem do tipo: 'Olá, [Nome do Cliente]! Passando para saber se ficou alguma dúvida sobre o orçamento do seu [Modelo do Carro].' O que acha de agendarmos 15 minutos para eu te mostrar como poderíamos recuperar uma parte dessas vendas paradas ainda esta semana?"</div>
-                </div>
-                <div class="value-offer"><strong>Valor da Nova Oferta:</strong> Aumentar a taxa de conversão, recuperar vendas perdidas, automatizar um processo tedioso e garantir que nenhum lead seja esquecido.</div>
+        <section class="track-flow">
+            <h2 class="track-title">--- Fluxo de Conversa Completo: Trilha B ---</h2>
+            <div class="persona-info">
+                <h3>Persona: Juliana, a arquiteta</h3>
+                <p><strong>Ponto de Partida:</strong> O vendedor está na conversa inicial de WhatsApp, após explicar o conceito da IA para Juliana.</p>
             </div>
 
-            <div class="example">
-                <h4 class="example-title">Cenário 2: Oferecendo o Dashboard de Análise como um Produto</h4>
-                <div class="step">
-                    <span class="step-label">Cliente:</span>
-                    <div class="dialogue">Dra. Amanda, a psicóloga.</div>
+            <div>
+                <h4 class="phase-title">Fase 2: Conexão e Agendamento da DEMONSTRAÇÃO</h4>
+                <p class="phase-objective"><strong>Objetivo da Fase:</strong> Transformar o interesse inicial em confiança, quebrar as principais objeções sobre a tecnologia e levar o lead a agendar uma demonstração prática da plataforma.</p>
+                <div class="dialogue">
+                    <p class="vendedor"><strong>Vendedor:</strong> "...o resultado é uma conversa muito mais fluida e natural."</p>
+                    <p class="lead"><strong>Juliana (Lead):</strong> "Ok, parece bom, mas qual o investimento? Tenho medo de ser muito caro para o meu momento como autônoma."</p>
+                    <p class="vendedor"><strong>Vendedor:</strong> "É uma ótima pergunta, Juliana, e super pertinente. Vamos pensar no custo do seu tempo. Quantas horas por semana você estima que gasta respondendo contatos que não viram projeto? Se a IA te devolvesse, digamos, 5 horas por semana para você focar em projetos de verdade, o investimento se pagaria rapidamente."</p>
+                    <p class="vendedor"><strong>Vendedor:</strong> "O objetivo é que a ferramenta libere seu ativo mais valioso: seu tempo criativo. Na nossa demonstração, posso te mostrar como isso se traduz em números e o plano que melhor se encaixa na sua realidade. O que acha de vermos isso juntos, sem compromisso?"</p>
                 </div>
-                 <div class="step">
-                    <span class="step-label">Serviço Inicial Contratado:</span>
-                    <div class="dialogue">Bot de IA Generativa + Fluxo de Follow-up para pacientes que não agendaram.</div>
-                </div>
-                <div class="trigger"><strong>Gatilho (O que o monitoramento revelou):</strong> Durante as conversas de acompanhamento, o vendedor percebe que a Dra. Amanda está cada vez mais interessada nos dados. Ela faz perguntas como: "De onde vêm meus melhores pacientes?", "Qual serviço eles mais procuram?", "Quantas mensagens a IA trocou até o agendamento?". Ela tem fome de informação para tomar decisões.</div>
-                <div class="pain-point"><strong>A Dor Identificada:</strong> Dra. Amanda está gerenciando seu consultório de forma reativa, baseada em "achismos". Ela não tem visibilidade clara sobre seus canais de aquisição ou sobre a eficiência do seu processo de conversão. Ela sente que poderia otimizar seu negócio, mas não sabe por onde começar por falta de dados claros.</div>
-                <div class="step">
-                    <span class="step-label">A Abordagem Consultiva (Script do Vendedor):</span>
-                    <div class="dialogue"><strong>Vendedor:</strong> "Olá, Dra. Amanda, tudo bem? Tenho notado que nas nossas últimas conversas você tem feito perguntas muito estratégicas sobre as métricas do seu atendimento. Isso é fantástico, mostra que você está pensando como uma verdadeira gestora do seu consultório. Sabe esses relatórios e números que eu te envio de vez em quando? Nós temos uma versão do nosso dashboard de análise que podemos liberar para você. Nele, você mesma consegue acessar em tempo real, de forma super visual, todas essas respostas que você busca: De qual canal (Instagram, Google, Indicação) estão vindo os pacientes que mais fecham. Quanto tempo em média leva desde o primeiro 'oi' até a consulta agendada. Quais são as dúvidas mais frequentes que a IA responde. Isso te daria uma clareza total sobre o que está funcionando para poder investir seu tempo e dinheiro de forma mais inteligente. Gostaria de fazer uma chamada rápida para eu compartilhar minha tela e te mostrar como ele funciona?"</div>
-                </div>
-                <div class="value-offer"><strong>Valor da Nova Oferta:</strong> Tomada de decisão baseada em dados, clareza sobre o ROI de cada canal, visão estratégica do negócio, gestão profissional do consultório.</div>
             </div>
-            
-            <div class="example">
-                <h4 class="example-title">Cenário 3: Oferecendo o Serviço de Tráfego Pago + Trackeamento</h4>
-                <div class="step">
-                    <span class="step-label">Cliente:</span>
-                    <div class="dialogue">Clínica de Estética.</div>
+
+            <div>
+                <h4 class="phase-title">Fase 3: Conversão</h4>
+                <p class="phase-objective"><strong>Objetivo da Fase:</strong> Provar o valor da solução de forma irrefutável durante a demonstração, apresentar os planos de forma clara, e conduzir o lead ao fechamento, reforçando o alívio da sua dor principal.</p>
+                 <div class="dialogue">
+                    <p class="vendedor"><strong>Vendedor (pós-demo):</strong> "Juliana, obrigado pelo seu tempo! Espero que tenha ficado claro como a IA pode ser uma verdadeira triagem para o seu escritório. A proposta com os planos está no seu e-mail."</p>
+                    <p class="vendedor"><strong>Vendedor (3 dias depois):</strong> "Olá, Juliana, tudo bem? Passando para saber se ficou alguma dúvida sobre a proposta. Um arquiteto parceiro nosso calculou que a cada 10 horas que a IA economizou para ele em atendimento, ele conseguiu usar esse tempo para desenvolver uma proposta mais detalhada que o ajudou a fechar um projeto a mais no trimestre. É um ROI imenso."</p>
+                    <p class="lead"><strong>Juliana (Lead):</strong> "Oi João, vi sim. Faz muito sentido. Quero começar com o plano inicial para testar."</p>
+                    <p class="vendedor"><strong>Vendedor:</strong> "Perfeito, Juliana! É um ótimo começo. Tenho certeza que você sentirá o impacto rapidamente. Vou te enviar os próximos passos!"</p>
                 </div>
-                 <div class="step">
-                    <span class="step-label">Serviço Inicial Contratado:</span>
-                    <div class="dialogue">Pacote Completo: Bot de IA + Fluxo de Follow-up + Dashboard de Análise.</div>
+            </div>
+
+            <div>
+                <h4 class="phase-title">Pós-Venda (Expansão e Sucesso do Cliente)</h4>
+                <p class="phase-objective"><strong>Objetivo da Fase:</strong> Garantir o sucesso do cliente com a solução inicial e, através de monitoramento proativo, identificar novas dores e oportunidades para expandir a parceria, aumentando o LTV do cliente.</p>
+                 <div class="upsell-scenario">
+                    <div class="dialogue">
+                        <p class="vendedor"><strong>Vendedor:</strong> "Oi Juliana, como vai? Vi aqui que a IA está te entregando em média 5 leads bem qualificados por semana, fantástico!"</p>
+                        <p class="lead"><strong>Juliana (Cliente):</strong> "Sim, tem ajudado muito a filtrar e economizar meu tempo!"</p>
+                        <p class="vendedor"><strong>Vendedor:</strong> "Excelente! Analisando seu funil, notei algo natural do seu mercado: alguns leads levam mais tempo para decidir depois que você envia a proposta. Para evitar que esses contatos 'esfriem' e acabem esquecendo de você, podemos criar um **fluxo de follow-up inteligente**."</p>
+                        <p class="vendedor"><strong>Vendedor:</strong> "A IA pode, por exemplo, enviar uma mensagem automática após 7 dias: 'Olá [Lead], tudo bem? Passando para saber se ficou alguma dúvida sobre a proposta do seu projeto.' Isso mantém o contato aquecido sem que você precise se preocupar com isso. O que acha de ativarmos essa funcionalidade?"</p>
+                    </div>
                 </div>
-                <div class="trigger"><strong>Gatilho (O que o monitoramento revelou):</strong> O dashboard do cliente mostra uma imagem clara: a "máquina de conversão" dele é excelente. A IA responde rápido, qualifica bem e os fluxos de follow-up funcionam, resultando numa alta taxa de conversão de lead para avaliação (ex: 25%). Porém, o volume de novos leads entrando no funil está estagnado há 2 meses.</div>
-                <div class="pain-point"><strong>A Dor Identificada:</strong> O negócio atingiu um platô de crescimento. A operação interna está otimizada, mas falta "combustível" (novos leads) para alimentar a máquina. Eles não sabem como atrair mais clientes qualificados de forma previsível e escalável.</div>
-                <div class="step">
-                    <span class="step-label">A Abordagem Consultiva (Script do Vendedor):</span>
-                    <div class="dialogue"><strong>Vendedor:</strong> "Olá, [Nome da Sócia], tudo bem? Estava analisando os resultados de vocês este trimestre e queria compartilhar algo. Primeiramente, parabéns! O dashboard mostra que a máquina de vocês está incrível: a taxa de conversão de leads em avaliações está em 25%, o que é muito acima da média do mercado. Vocês não perdem as oportunidades que chegam. O que notei também é que o volume de novos contatos se manteve estável. Ou seja, vocês construíram um motor de Ferrari, mas estamos colocando pouco combustível. É exatamente aqui que entra a nossa outra frente de especialização: o serviço de tráfego pago. Nossa equipe pode criar e gerenciar campanhas de anúncios no Instagram e Google, focadas em atrair o público certo para o WhatsApp de vocês. O melhor de tudo? Como já temos o dashboard e todo o trackeamento implement
+            </div>
+        </section>
+
+        <section class="track-flow">
+            <h2 class="track-title">--- Fluxo de Conversa Completo: Trilha C ---</h2>
+            <div class="persona-info">
+                <h3>Persona: A sócia da Clínica de Estética</h3>
+                <p><strong>Ponto de Partida:</strong> O vendedor fez a abordagem hiper-personalizada baseada na indicação da agência parceira.</p>
+            </div>
+
+            <div>
+                <h4 class="phase-title">Fase 2: Conexão e Agendamento da DEMONSTRAÇÃO</h4>
+                <p class="phase-objective"><strong>Objetivo da Fase:</strong> Transformar o interesse inicial em confiança, quebrar as principais objeções sobre a tecnologia e levar o lead a agendar uma demonstração prática da plataforma.</p>
+                <div class="dialogue">
+                    <p class="vendedor"><strong>Vendedor:</strong> "...nossa plataforma de IA pode assumir 100% desse fluxo, respondendo e agendando avaliações diretamente na sua agenda, 24 horas por dia."</p>
+                    <p class="lead"><strong>Sócia da Clínica (Lead):</strong> "Interessante. Mas e se o lead tiver uma dúvida muito específica sobre um procedimento, como 'laser para melasma em pele negra'? A IA vai saber responder ou vai falar besteira?"</p>
+                    <p class="vendedor"><strong>Vendedor:</strong> "Excelente ponto, e crucial para a segurança de vocês. A IA é treinada com *todos* os seus materiais: PDFs dos procedimentos, protocolos, FAQs, etc. Ela só responde com base no que aprendeu. E o mais importante: para dúvidas que ela não tem 100% de certeza, configuramos um **transbordo imediato para uma de suas atendentes humanas**. Ou seja, a IA resolve 95% do volume e garante que os 5% complexos cheguem na pessoa certa. Quer ver isso funcionando na prática na nossa demo?"</p>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="phase-title">Fase 3: Conversão</h4>
+                <p class="phase-objective"><strong>Objetivo da Fase:</strong> Provar o valor da solução de forma irrefutável durante a demonstração, apresentar os planos de forma clara, e conduzir o lead ao fechamento, reforçando o alívio da sua dor principal.</p>
+                 <div class="dialogue">
+                    <p class="vendedor"><strong>Vendedor (pós-demo):</strong> "Foi um prazer mostrar como podemos acabar com a sobrecarga de DMs na clínica. A proposta detalhada está a caminho do seu e-mail."</p>
+                    <p class="vendedor"><strong>Vendedor (2 dias depois):</strong> "Olá [Sócia], tudo bem? Só um cálculo rápido que fiz aqui: se a IA evitar que vocês percam apenas 2 agendamentos por dia (por demora na resposta), com um ticket médio de R$300 por avaliação, isso representa mais de **R$12.000 de faturamento recuperado no final do mês**. É um impacto direto e imediato. Conseguiram avaliar a proposta?"</p>
+                    <p class="lead"><strong>Sócia da Clínica (Lead):</strong> "Olá. O número faz sentido. Vamos fechar."</p>
+                    <p class="vendedor"><strong>Vendedor:</strong> "Ótima decisão! Vamos colocar essa máquina de agendamentos para funcionar. Te enviando os próximos passos agora mesmo."</p>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="phase-title">Pós-Venda (Expansão e Sucesso do Cliente)</h4>
+                <p class="phase-objective"><strong>Objetivo da Fase:</strong> Garantir o sucesso do cliente com a solução inicial e, através de monitoramento proativo, identificar novas dores e oportunidades para expandir a parceria, aumentando o LTV do cliente.</p>
+                 <div class="upsell-scenario">
+                    <div class="dialogue">
+                        <p class="vendedor"><strong>Vendedor:</strong> "Olá, [Sócia], tudo bem? Preparei nossa análise de resultados do semestre e queria compartilhar algo com você."</p>
+                        <p class="vendedor"><strong>Vendedor:</strong> "Primeiramente, parabéns! O dashboard mostra que a máquina de vocês está incrível: **a taxa de conversão de leads em avaliações está em 25%**, o que é muito acima da média do mercado. Vocês não perdem as oportunidades que chegam."</p>
+                        <p class="vendedor"><strong>Vendedor:</strong> "O que notei também é que o volume de novos contatos se manteve estável nos últimos 60 dias. Ou seja, **vocês construíram um motor de Ferrari, mas estamos colocando pouco combustível.**"</p>
+                        <p class="vendedor"><strong>Vendedor:</strong> "É exatamente aqui que entra a nossa outra frente de especialização: **o serviço de tráfego pago.** Nossa equipe pode criar e gerenciar campanhas de anúncios no Instagram, focadas em atrair o público certo para o seu WhatsApp. Como já temos todo o trackeamento implementado, saberemos exatamente qual anúncio gera mais agendamentos e qual o retorno sobre cada real investido. É crescimento previsível. Faz sentido agendarmos uma conversa para eu te apresentar como poderíamos **gerar um fluxo constante de novos clientes para essa máquina de conversão que vocês já têm?**"</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 AI Atende. Transformando Atendimento em Crescimento.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
